@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+
+         
+        <!-- <link rel="stylesheet" type="text/css" href="test1.css"> --> <!-- style sheet of test1 -->
+        <!-- <script type="text/javascript" src="test1.js"></script> --><!-- SCRIPT FILE OF TEST1 FOR SWAP THE SIGIN AND SIGNUP OPTION -->
+        <link rel="stylesheet" type="text/css" href="test1.css">
+        <script type="text/javascript" src="signup.js"></script>
+
+        <!-- GOOGLESIGNIN CSS START -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <meta name="google-signin-client_id" 
+        content="894572283325-drh78usaq6ga39g832dcu1j67p3mdqh2.apps.googleusercontent.com">
+
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        
+        <script type="text/javascript" src="script.js"></script>
+         <!-- GOOGLESIGNIN CSS END-->
+
+         
+
+        
+</head>
+
+<body>
+
+  <!-- CONTENT TO BE DISPLAYED AFTER THE USER LOGININ -->
+  <div id="data" class="data">
+                <p align="left" class="alert alert-danger" id="idnum"></p>
+                <p>Profile Details</p>
+                <img id="pic" class="img-circle" width="100" height="100"/>
+                <p style="text-align: right;">Email Address:
+                <p id="email" class="alert alert-danger"></p>
+                <button id="btn" onclick="signOut()" class="btn btn-danger">SignOut</button>
+  <hr>
+
+  </div>
+
+
+
+
+
+
+
+<div class="form" id="form1">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+            <h1>Sign Up for Free</h1>
+          
+            <form action="" method="post">
+          
+                      <div class="top-row">
+                          <div class="field-wrap">
+                          <label>
+                                First Name<span class="req">*</span>
+                          </label>
+                          <input type="text" id="firstname" required autocomplete="off" />
+                        </div>
+        
+                        <div class="field-wrap">
+                          <label>
+                                 Last Name<span class="req">*</span>
+                          </label>
+                          <input type="text" id="lastname" required autocomplete="off"/>
+                        </div>
+                      </div>
+
+              <div class="field-wrap">
+                      <label>
+                           Email Address<span class="req">*</span>
+                      </label>
+                     <input type="email" required autocomplete="off"/>
+              </div>
+          
+              <div class="field-wrap">
+                              <label>
+                                Set A Password<span class="req">*</span>
+                              </label>
+                              <input type="password" required autocomplete="off"/>
+              </div>
+            
+              <button type="submit" class="button button-block" onclick="onSignUp()">Get Started</button>
+            </br>
+           
+                
+          </form>
+
+        </div> <!-- </signup> -->
+        
+      <div id="login">   
+
+        <h1>Welcome Back!</h1>
+          
+          <form action="" method="post">
+          
+               <div class="field-wrap">
+                  <label>
+                    Email Address<span class="req">*</span>
+                  </label>
+                  <input type="email" required autocomplete="off"/>
+               </div>
+          
+                <div class="field-wrap">
+                  <label>
+                    Password<span class="req">*</span>
+                  </label>
+                  <input type="password"  required autocomplete="off"/>
+                </div>
+          
+                <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+                  <button class="button button-block"/>Log In</button>
+          
+                  <p style="text-align:center;margin-top:20px ;color:#284684;">Or Sign In with Google</p>
+                  
+                  <div id='signin' class="g-signin2" data-onsuccess="onSignIn" style="width:250px;height: 40px;margin: 0px auto;" data-theme="dark" data-longtitle=true></div>
+         
+          </form>
+
+      </div> <!-- login end -->
+        
+    </div><!-- tab-content -->
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script  type="text/javascript" src="js/index.js"></script>
+    
+</div> <!-- /form -->
+          
+
+        
+
+</body>
+</html>
