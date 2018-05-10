@@ -3,11 +3,68 @@
 <head>
 <title></title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+       <!-- LINKS FOR USING BOOTSTRAP ONLINE START -->
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- LINKS FOR USING BOOTSTRAP ONLINE END-->
+
+
+
+    <link rel="stylesheet" type="text/css" href="vlab.css">
+
+      <!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+        <style type="text/css">
+     #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: red;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+
+            #myBtn:hover {
+              background-color: #555;
+            }
+                  .card{
+        margin-top: 20px;
+      }
+      .card:hover {
+
+        box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+      body{
+  background-image: url("https://source.unsplash.com/wn-KYaHwcis");
+  /*opacity: 0.5;*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+}
+.jumbotron{
+  opacity: 0.92;
+
+}
+     </style>
 
          
-        <!-- <link rel="stylesheet" type="text/css" href="test1.css"> --> <!-- style sheet of test1 -->
+ 
+
+               <!-- <link rel="stylesheet" type="text/css" href="test1.css"> --> <!-- style sheet of test1 -->
         <!-- <script type="text/javascript" src="test1.js"></script> --><!-- SCRIPT FILE OF TEST1 FOR SWAP THE SIGIN AND SIGNUP OPTION -->
-        <link rel="stylesheet" type="text/css" href="test1.css">
+        <link rel="stylesheet" type="text/css" href="test12.css">
         <script type="text/javascript" src="signup.js"></script>
 
         <!-- GOOGLESIGNIN CSS START -->
@@ -27,25 +84,254 @@
         
 </head>
 
-<body>
+<body style="font-family: 'Open Sans', sans-serif;">
 
-  <!-- CONTENT TO BE DISPLAYED AFTER THE USER LOGININ OF GOOGLE SIGNIN THIS DATA DIV IS USED TO DISPLAY OUR CONTENT IN WEBPAGE-->
+  <!-- CONTENT TO BE DISPLAYED AFTER THE USER LOGININ -->
   <div id="data" class="data">
-                <p align="left" class="alert alert-danger" id="idnum"></p>
-                <p>Profile Details</p>
-                <img id="pic" class="img-circle" width="100" height="100"/>
-                <p style="text-align: right;">Email Address:
-                <p id="email" class="alert alert-danger"></p>
-                <button id="btn" onclick="signOut()" class="btn btn-danger">SignOut</button>
-  <hr>
+                <!-- <p align="left" class="alert alert-danger" id="idnum" style="width: 20%;"> -->
+                <!-- <p>Profile Details</p> -->
+                <!-- <div class="row">
+                    <div class="col-sm-12">
+                    <img id="pic" class="img-circle" width="100" height="100" align="right" />
+                    <p style="text-align: left;">Email Address:</p>
+                    <p id="email" class="alert alert-danger"></p>
+                    <button id="btn" onclick="signOut()" class="btn btn-danger" >SignOut</button>
+                  </div>
+                </div> -->
 
-  </div>
+                  
+                    <nav class="nav navbar-inverse navbar-fixed-top" style="margin-top:2px;">
+                       <ul class="nav">
+                         <li class="nav-item"><a href="vlab.html">Home</a></li>
+                         <li class="nav-item"><a href="">Experiments</a></li>
+                         <li class="nav-item"><a href="">Projects</a></li>
+                         <li class="nav-item"><a href="gate.html">Gate</a></li>
+                         <button id="btn" onclick="signOut()" class="btn btn-danger navbar-btn" style="margin-left: 900px;">SignOut</button>
+                       </ul>
+                    </nav>
+                      
+                    
+
+                <div class="container-fluid" >
+                  <div class="jumbotron">
+                    <p><b>Id:</b>
+                    <span align="left" id="idnum"></span>
+                    <span><img id="pic" class="img-circle" width="100" height="100" align="right" /></span>
+                  </p>
+                      <!-- <p>Profile Details</p> -->
+                      
+                      <p><b>Email Address:</b>
+                      <span id="email"></span></p>
+                      <button id="btn" onclick="signOut()" class="btn btn-danger navbar-btn" >SignOut</button>
+
+                      
+                    
+                  </div>
+                </div>
+              
+            <!--  <div class="container">
+                <div class="jumbotron"> -->
+                       <!-- <nav class="navbar navbar-default">
+                            <div class="container-fluid"> -->
+                                     <!-- <ul class="nav navbar-nav navbar-right"> -->
+                                      <!-- <ul class="nav navbar-nav">
+                                          <li><a href="vlab.html">Home</a></li>
+                                          
+                                          <li><a href="experiment.html">Experiments</a></li>
+                                          <li><a href="#">Projects</a></li>
+                                          <li><a href="gate.html">GATE</a></li>
+                                      
+                                          <button id="btn" onclick="signOut()" class="btn btn-danger navbar-btn" style="margin-left: 900px;">SignOut</button>
+                                          </ul> -->
+                            <!-- </div>/.navbar-collapse -->
+                      <!-- </nav> -->
+                <!-- </div>
+              </div>
+               -->
+
+                
+      <!-- ============================================================================ -->
+
+                   <!-- THIS CONTAINER CLASS IS FOR CARD DISPLAY OF SUBJECTS START -->
+
+                <div class="container">
+                     <div class="jumbotron">
+
+    <!-- ROW 1 -->
+
+      <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/algo.jpe" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">ADA</h4>
+                  <p class="card-text">Algo:Design & Analysis</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/Apti.png" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">Apti</h4>
+                  <p class="card-text">Aptitude & Reasoning.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/CD.png" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">CD</h4>
+                  <p class="card-text">Compiler Design.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/CN.jpe" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">CN</h4>
+                  <p class="card-text">Computer Networks.</p>
+                  <a href="CN.html" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br/><br/>
+
+      <!-- ROW 2 -->
+
+      <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/CP.jpg" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">C/C++</h4>
+                  <p class="card-text">C Programming.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/DBMS.jpe" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">DBMS</h4>
+                  <p class="card-text">Database Mngmt. Sys.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/DE.jpg" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">DE</h4>
+                  <p class="card-text">Digital Electronics.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/DM.png" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">DM</h4>
+                  <p class="card-text">Discrete Mathematics.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <!-- ROW 3 -->
+
+      <br/><br/>
+      <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/DS.jpg" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">DS</h4>
+                  <p class="card-text">Data Structures.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+                    
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/EM.jpg" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">EM</h4>
+                  <p class="card-text">Engineering Maths.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+                    
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/Os.png" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">OS</h4>
+                  <p class="card-text">Operating Systems.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-3">
+            <div class="card">
+              <img class="card-img-top" src="pic/TOC.jpg" alt="Card image">
+                <div class="card-body" style="font-family: 'Open Sans', sans-serif;">
+                  <h4 class="card-title">TOC</h4>
+                  <p class="card-text">Theory of Computation.</p>
+                  <a href="#" class="btn btn-primary">Click to Explore</a>
+                </div>
+            </div>
+          </div>
+      </div>
+                    </div>
+                </div>      
+           <!-- 
+                        <div class="container">
+                               
+                              <div class="jumbotron">
+                                <p id = "para1"></p>
+                                <p id = "para2"></p>
+                                <p id = "para3"></p>
+                              </div>
+
+                         </div> 
+           -->
+                           <!-- <p id="para3"></p> -->
+                      <!-- <script type="text/javascript" src="js/signup1.js"></script> -->
+
+                    
+</div> 
+            
+               
+              	
+     
+                 
+   
 
 
 
 
 
-
+<!-- LOGIN FORM START FROM HERE -->
 
 <div class="form" id="form1">
       
@@ -135,6 +421,30 @@
         <script  type="text/javascript" src="js/index.js"></script>
     
 </div> <!-- /form -->
+
+<!-- RETURN TO TOP CODE RED SYMBOL -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
           
 
         
