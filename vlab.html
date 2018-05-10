@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Virtual Labs | CCET</title>
+
+	<script type = "text/javascript" >
+
+     function preventBack(){window.history.forward();}
+
+     setTimeout("preventBack()", 0);
+
+     window.onunload=function(){null};
+
+   </script>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<!-- ICON NEEDS FONT AWESOME FOR CHEVRON UP ICON -->
+	<style>
+			  #myBtn {
+			  display: none;
+			  position: fixed;
+			  bottom: 20px;
+			  right: 30px;
+			  z-index: 99;
+			  font-size: 18px;
+			  border: none;
+			  outline: none;
+			  background-color: red;
+			  color: white;
+			  cursor: pointer;
+			  padding: 15px;
+			  border-radius: 4px;
+			}
+
+			#myBtn:hover {
+			  background-color: #555;
+			}
+	</style>
+
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="vlab.css">
 	<script src="http://code.jquery.com/jquery-3.3.1.js"
@@ -12,44 +50,125 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 </head>
-<body>
+
+
+<body style="font-family: 'Open Sans', sans-serif;">
 	<div id="logo" class="container">
 	<img src="ccet.png" width="100" height="100"><span id="main_name"><a id="home" href="#"> CCET|Virtual Labs</a></span>
+
 	<span class="person">
 		<button class="btn btn-default btn-lg" style="margin-left: 20px;margin-right: 10px;"><a id="login" href="test1.html">Login </a><i class="fas fa-user"></i></button>
 		<button class="btn btn-default btn-lg"><a id="signup" href="test1.html">Sign Up </a><i class="fas fa-user-plus"></i></button>
 	</span>
 
-	<nav class="navbar navbar-default">
-		<div class="container">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      
+    <div class="background">
+			<nav class="navbar navbar-default">
+				<div class="container">
+						  <div class="container-fluid">
+						    <!-- Brand and toggle get grouped for better mobile display -->
+						    <div class="navbar-header">
+						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      
+						    </div>
+								<!-- Collect the nav links, forms, and other content for toggling -->
+						    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						      <ul class="nav navbar-nav navbar-right">
+						      	 	<li class="active"><a href="vlab.html">Home</a></li>
+						      	 	<li><a href="#about">About</a></li>
+						        	<li><a href="experiment.html">Experiments</a></li>
+						          	<li><a href="#">Projects</a></li>
+						          	<li><a href="gate.html">GATE</a></li>
+						          	<li><a href="#contact">Contact Us</a></li>
+
+						        
+						      </ul>
+						    </div><!-- /.navbar-collapse -->
+						  </div><!-- /.container-fluid -->
+		  		</div>
+			</nav>
+	</div>
+
+<div class="container" style="margin-top: 600px;font-size: 20px;text-align: justify;">
+	<div class="jumbotron">
+		<p id="about">
+	            <h1>About</h1>
+	            <br/><br/>
+	            The pursuit of knowledge has always been hampered due to lack of resources, equipment, or technical know-how. But in this digital age, these limitations can easily be tackled through the use of Internet. Virtual labs gives the power to access, facilitate, enhance, and improve the process of learning and experimentation without being bounded by geographical distances or logistic deficiency. <br/>
+                Web-shared resources and experiments can be used to stimulate research and induce an atmosphere of innovation in students. This collective knowledge of researchers, professors, and students can be highly useful for providing distance learning to every computer. This not only exposes the students to Practical implementations of engineering concepts but also aids them in their academic or research work. Internet-aided experimentation further permits sharing of resources – procedures, software, and data available on the web to carry out sophisticated experiments over geographically separate places.
+
+
+        </p>
+        <p id="contact" style="margin-top: 500px;">
+        	<h1>Contact Us</h1>
+        	
+		  <div class="row" style="margin-top: 50px;">
+		  		      <div class="col-sm-3">
+						  <img src="pic/aman.jpg" class="img-circle"  width="230" height="200">
+
+						  <p style="text-align: center;margin-top: 20px;">Amandeep Singh</p>
+						  <p style="text-align: center;margin-top: 20px;font-size: 20px;">amna8saini@gmail.com</p>
+						  
+						  
+					  </div>
+
+						<div class="col-sm-3">
+						  <img src="pic/mansha.jpg" class="img-circle"  width="250" height="200">
+						  <p style="text-align: center;margin-top: 20px;">Mansha Bhatia</p>
+						  <p style="text-align: center;margin-top: 20px;font-size: 20px;">manshabhatia27@gmail.com</p>
+					  </div>
+
+					  <div class="col-sm-3">
+						  <img src="pic/rinku.jpg" class="img-circle"  width="250" height="200">
+						  <p style="text-align: center;margin-top: 20px;">Rinku Yadav</p>
+						 <p style="text-align: center;margin-top: 20px;font-size: 20px;">rinkuccet@gmail.com</p>
+					  </div>
+
+					  
+
+					  <div class="col-sm-3">
+						  <img src="pic/rishab.jpg" class="img-circle"  width="250" height="200">
+						  <p style="text-align: center;margin-top: 20px;">Rishabh Malhotra</p>
+						 <p style="text-align: center;margin-top: 20px;font-size: 20px;">rishabh_malhotra@outlook.com</p>
+					  </div>
+	      </div>
+
+        	
+        </p>
     </div>
+</div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-      	 	<li><a href="#">Home</a></li>
-      	 	<li><a href="#">About</a></li>
-        	<li><a href="#">Experiments</a></li>
-          	<li><a href="#">Projects</a></li>
-          	<li><a href="#">GATE</a></li>
-          	<li><a href="#">Contact Us</a></li>
+<!-- RETURN TO TOP CODE -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-        
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </div>
-</nav>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+  
+
 
 
 </body>
