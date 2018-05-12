@@ -17,6 +17,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <!--  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+	  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
+
+
 
 
   <style type="text/css">
@@ -58,7 +65,7 @@
 
              <div class="container" style="text-align: justify;">
 				<div class="jumbotron">
-					<nav class="navbar navbar-inverse">
+					<nav class="navbar navbar-inverse navbar-fixed-top">
 					  
 					    <div class="navbar-header">
 					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -73,19 +80,29 @@
 					    <div class="collapse navbar-collapse" id="myNavbar">
 
 							      <ul class="nav navbar-nav ">
-							        <li class="active"><a href="#">Syllabus</a></li>
+							        <li class="active"><a href="CN.html">Syllabus</a></li>
 							        <li class="dropdown">
 							          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics <span class="caret"></span></a>
 							          <ul class="dropdown-menu">
-							            <li><a href="#intro">Introduction</a></li>
-							            <li><a href="#">Topologies</a></li>
-							            <li><a href="#">Concept of layers</a></li>
-							            <li><a href="#">LAN Technologies</a></li>
-							            <li><a href="#">Flow and Error Control</a></li>
+							            <li><a href="introcn.html">Introduction</a></li>
+							            <li><a href="topo.html">Topologies</a></li>
+							            <li><a href="concept.html">Concept of layers</a></li>
+							            <li><a href="lan.html">LAN Technologies</a></li>
+							            <li><a href="flow.html">Flow and Error Control</a></li>
+							             <li ><a href="ip.html">Internet Protocol(IPv4)</a></li>
+							             <li ><a href="fragment.html">Concept Of Fragmentation</a></li>
 							          </ul>
 							        </li>
-							        <li><a href="#">Quizzes</a></li>
-							        <li><a href="#">Feedback</a></li>
+							       <li class="dropdown">
+                                     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Quizzes<span class="caret"></span></a>
+									          <ul class="dropdown-menu">
+											            <li><a href="quiz.html">Quiz 1</a></li>
+											            <li><a href="quiz1.html">Quiz 2</a></li>
+											            <li><a href="quiz.html">Quiz 3</a></li>
+											            <li><a href="quiz.html">Quiz 4</a></li>
+									          </ul>
+							        	</li>
+							        <li><a href="Feedback.html">Feedback</a></li>
 							      </ul>
 
 
@@ -109,31 +126,7 @@
 					        <!-- <p class="para1"></p>
 							<p class="para1"></p>
 							<p class="para1"></p> -->
-							<div id="intro" style="margin-top: 400px;">
-					    	   <p><b><u>INTRODUCTION</u></b></p>
-					    	   <p>A Computer Network is a data-communication network that consists of computers (called nodes), and connections between them (called links).<br/>
-
-		                          A network can be mathematically represented as a graph where the nodes represent the vertices of the graph and the links represent the edges. Consequently, all the algorithms that are applicable to graphs (such as Bellman Ford, Dijkstra, Prim’s, Kruskal) will be applicable to networks as well and we’ll use these quite frequently to solve various problems that arise in the networks.</p>
-		                    <center><img src="pic/CN1.jpg" class="img-thumbnail"></center>
-		                    <br/><br/>
-		                    <p>Five main components of any general data communication system are:<br/><br/>
-
-		                    <b><u>Message:</u></b> The information to be communicated. It can be text, numbers, pictures, audio, video etc.<br/>
-
-		                     <b><u>Sender:</u></b> A device that sends the data message.<br/>
-
-		                     <b><u>Receiver:</u></b> A device that receives the message.<br/>
-
-		                     <b><u>Transmission Medium:</u></b> Physical path by which the data travels. Some examples are twisted wire cables, coaxial cables, optical fibres, or radio waves in Wi-Fi.<br/>
-
-		                     <b><u>Protocol:</u></b> A set of rules that govern the data communication. A protocol defines the format and order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.<br/>
-		                    </p>
-					       
-
-					        <script type="text/javascript" src="js/CN.js"></script>
-
-			    </div>
-
+							<script type="text/javascript" src="js/CN.js"></script>
 			   
 					
                     

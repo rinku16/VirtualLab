@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Concept Of Layers</title>
+
+				 <!-- LINKS FOR USING BOOTSTRAP ONLINE START -->
+			   <!-- <meta charset="utf-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1">
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+			    <!-- LINKS FOR USING BOOTSTRAP ONLINE END-->
+			    <meta charset="utf-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+			  <style type="text/css">
+			     #myBtn {
+			              display: none;
+			              position: fixed;
+			              bottom: 20px;
+			              right: 30px;
+			              z-index: 99;
+			              font-size: 18px;
+			              border: none;
+			              outline: none;
+			              background-color: red;
+			              color: white;
+			              cursor: pointer;
+			              padding: 15px;
+			              border-radius: 4px;
+			            }
+
+			            #myBtn:hover {
+			              background-color: #555;
+			            }
+			   </style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+
+	<div class="container">
+		<div class="jumbotron">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+					  
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+					      </button>
+					      <a class="navbar-brand" href="#">GATE | Computer Networks</a>
+					    </div>
+					    
+
+					    <div class="collapse navbar-collapse" id="myNavbar">
+
+							      <ul class="nav navbar-nav ">
+							        <li><a href="CN.html">Syllabus</a></li>
+							        <li class="dropdown">
+							          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics <span class="caret"></span></a>
+							          <ul class="dropdown-menu">
+							            <li><a href="introcn.html">Introduction</a></li>
+							            <li><a href="topo.html">Topologies</a></li>
+							            <li class="active"><a href="concept.html">Concept of layers</a></li>
+							            <li><a href="lan.html">LAN Technologies</a></li>
+							            <li><a href="flow.html">Flow and Error Control</a></li>
+							             <li ><a href="ip.html">Internet Protocol(IPv4)</a></li>
+							             <li ><a href="fragment.html">Concept Of Fragmentation</a></li>
+							          </ul>
+							        </li>
+							       <li class="dropdown">
+                                     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Quizzes<span class="caret"></span></a>
+									          <ul class="dropdown-menu">
+											            <li><a href="quiz.html">Quiz 1</a></li>
+											            <li><a href="quiz1.html">Quiz 2</a></li>
+											            <li><a href="quiz.html">Quiz 3</a></li>
+											            <li><a href="quiz.html">Quiz 4</a></li>
+									          </ul>
+							        	</li>
+							        <li><a href="Feedback.html">Feedback</a></li>
+							      </ul>
+
+
+							      <!-- <ul class="nav navbar-nav navbar-right">
+							        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+							        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							      </ul> -->
+
+					    </div>
+					  
+					 </nav>
+
+             <P><b><u>CONCEPT OF LAYERING</u></b></P>
+             <p>As discussed earlier, a network is a set of devices, connected by communication links. The general concept of a computer network that we’ll discuss here, applies to inter-system communication (between 2 different systems), and not intra-system communication (for such communication, we use Operating Systems’ Inter-Process Communication concept)</p>
+             <center><img src="pic/concept.jpg" class="img-thumbnail"/></center>
+             <p>The main objective of a computer network is to give an illusion to the client and server that they are present on the same system.</p>
+             <p>Why layering is done?</p>
+             <p>Layering for a computer network communication is done so as to divide the various functions of the network into different sections so as to facilitate:</p>
+             <p>•	Encapsulation: To combine the functionalities of one layer for easier access.<br/>
+
+				•	Abstraction: It is done for security reasons. Abstraction implies the functionalities of one layer are hidden form the other layers.<br/>
+
+				•	Ease of Testing: Isolation of a fault is easier in layered structure, as it doesn’t require examining the network as a whole.<br/>
+
+				•	Divide & Conquer mechanisms are proven to optimise the system requirements.
+				</p>
+				<p>Functions to be covered by the layers</p>
+				<center><img src="pic/function.jpg" class="img-thumbnail"/></center>
+				<p><b><u>THE OSI MODEL</u></b></p>
+				<p>The purpose of the OSI model is to show how to facilitate communication between different systems without requiring changes to the logic of the underlying hardware and software.</p>
+				<p>The OSI model is a layered framework for the design of network systems that allow communication between all types of computer systems. It consists of seven layers.</p>
+				<center><img src="pic/layers.jpg" class="img-thumbnail"/></center>
+				<p>In this layered architecture, a message starts from the sender, and reaches the receiver through a physical link (which might be cable or wireless). While the message passes through the physical link, it may cross some intermediate nodes (routers), which generally have only the bottom 3 layers. The designers of the OSI model identified the related functions with related uses, and collected those to discrete groups that became the layers. Each layer defined a family of functions that differ from the other layers. Thus, the designers created an architecture that is both comprehensive and flexible. Most importantly, OSI model allows complete interoperability between otherwise incompatible systems.
+
+				</p>
+				<p>The processes on each machine that communicate at a given layer are called peer-to-peer processes. Each layer is connected to the layer above and below through interfaces for efficient communication between the layers.</p>
+				<center><img src="pic/layer1.jpg" class="img-thumbnail"/></center>
+				<p>Each layer adds its own header (and sometimes a trailer), that provides with the information of the functionalities of that particular layer.</p>
+				<center><img src="pic/layer2.jpg" class="img-thumbnail"/></center>
+				<p>The encapsulated packet has a different terminology at different layers.</p>
+				<center><img src="pic/packet.jpg" class="img-thumbnail"/></center>
+				<p><b>Q. Let ‘m’ be the message to be transmitted, ‘n’ be the layers that are present in the network. It is given that each layer adds a header of size ‘h’. What percentage of the network is filled with headers? What percentage is filled with message?</b></p>
+						<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">See Solution</button><br/><br/>
+										  <div id="demo" class="collapse">
+
+				                                   <p> Each layer adds a header of size ‘h’. Therefore, total size of all headers = nh <br/>
+
+													The network contains the message as well as the headers. Hence, percentage of network filled with headers will be<br/>
+
+													(nh / (nh + m)) * 100<br/>
+
+													Similarly, percentage of network filled with message = (m / (nh + m)) * 100
+													</p>
+
+										  </div>
+
+				<p><b><u>Physical Layer:</u></b></p>
+				<P>Physical Layer deals only with the hardware. To be precise it deals with the functionalities and procedures of the physical links and devices and their mechanical and electrical specifications.</P>
+				<p>•	Physical characteristics of the interface and medium<br/>
+
+						•	Representation of bits (Type of Encoding used)<br/>
+
+						•	Data Rate (Description of Bandwidth)<br/>
+
+						•	Synchronization of bits (Synchronization of sender and receiver clocks)<br/>
+
+						•	Line Configuration (Point-to-Point or Multipoint)<br/>
+
+						•	Physical Topology (Mesh, Star, Ring, Bus, Hybrid)<br/>
+
+						•	Transmission Mode (Simplex, Half-Duplex, Full Duplex)
+
+				</p>
+
+				<p>Since, Physical Layer does not form a major portion of the GATE syllabus, only the important concepts of the physical layer will be discussed. For more extensive details about Physical Layer, <a href="#">click here.</a></p>
+
+				<P><b><u>Data Link Layer:</u></b></P>
+				<p>The data link layer is responsible for <b>hop-to-hop delivery.</b> It makes sure that the transmissions in the network are reliable.</p>
+				<p><b>•	Framing:</b> The stream of bits is divided into data units called frames.<br/>
+
+				<b>•	Physical Addressing:</b>MAC addresses are assigned to each intermediate hop, the sender and the receiver for accurate delivery to the intended user.<br/>
+
+
+				<b>•	Flow Control: </b>It synchronizes the sender and the receiver. It makes sure that the sender does not send more data than the receiver can receive, by proposing a control mechanism not to overwhelm the user.<br/>
+
+
+				<b>•	Error Control:</b> The data link layer adds reliability to physical layer by adding mechanisms to detect and retransmit damaged or lost frames. It also uses a mechanism to recognise duplicate frames.<br/>
+
+
+				<b>•	Access Control:</b> It is necessary to determine which device will gain control over the link at any given time.
+				</p>
+				<p><b><u>Network Layer:</u></b></p>
+				<p>The network layer is responsible for <b>source-to-destination delivery</b> of a packet, possibly across multiple networks. The network layer header provides with the IP address of the destination, which generally can be broken down into two parts, Network ID (NID) and Host ID (HID). The NID gives the address of the network where the destination node is present, and the HID gives the address of the node in that network.</p>
+				<p><b>•	Logical Addressing:</b> Physical Addressing handles the addressing problem locally. If a network boundary, we need the logical addressing system to distinguish the source and destination systems.<br/><b>
+
+					•	Routing:</b> When independent networks or links are connected to create internetworks, the connecting devices route the packet to the final destination. This process is called routing and is implemented at the network layer.
+					</p>
+
+					<p><b><u>Transport Layer:</u></b></p>
+					<p>The transport layer is responsible for <b>process-to-process delivery.</b> A process is an application running inside the host. At any time, more than one process may run at a host. Selecting the correct process to which the packet is to be delivered is done using another type of addressing. It also ensures that the whole message arrives intact and in order, overseeing both flow and error control at the source-destination level.</p>
+					<p><b>•	Service-point addressing:</b> As discussed earlier, a computer might run several processes. The transport layer header is therefore responsible for providing port-address, so that the entire, message gets to the correct process on that computer.<br/>
+
+					<b>•	Segmentation and Reassembly: </b>A message is divided into segments with their corresponding sequence number. These segments may arrive out-of-order at the destination; hence they need to be reassembled at the destination.<br/>
+
+					<b>•	Connection-Control:</b> The transport layer can be either connectionless or connection-oriented.<br/>
+
+					<b>•	Flow Control:</b> Flow control is performed end to end.<br/>
+
+					<b>•	Error Control: </b>Error control is performed process-to-process than at the link level.<br/>
+					</p>
+
+
+
+
+					<p><b><u>Session Layer:</u></b></p>
+					<p>The session layer is the <b>network dialogue controller.</b> It establishes, maintains, and synchronizes the interactions among communicating systems.</p>
+					<p><b>•	Dialog Control: </b>It allows the communication between 2 processes in either half-duplex or full-duplex mode.<br/>
+
+						<b>•	Synchronization: </b>The session layer allows a process to add checkpoints. These checkpoints are added after regular intervals and acknowledged independently. They are used to facilitate faster crash recovery.
+
+						</p>
+
+				   <p><b><u>Presentation Layer:</u></b></p>
+				   <p>It is concerned with the syntax and semantics of the information exchanged between two systems.</p>
+				   <p><b>•	Translation:</b> The character strings, numbers etc. must be converted to bit streams before being transmitted. Different computers use different encoding schemes.<br/>
+
+					•	Presentation layer is responsible for the interoperability between these different encoding methods<br/>
+
+					<b>•	Encryption: </b>The sender transforms the original message into some other form and sends the resulting message out on the network. Decryption reverses the original process.<br/>
+
+					<b>•	Compression:</b> Data compression reduces the number of bits contained in the information.
+					</p>
+
+					<p><b><u>Application Layer:</u></b></p>
+					<P>The application layer enables the user, whether human or software, to access the network.
+
+						In other terms, it acts as an interface between the users and network.
+						</P>
+					<P>•	Network Virtual Terminal: A network virtual terminal is a software version of a physical terminal, and it allows user to log in to a remote host.<br/>
+
+					•	File transfer, access and management: This application allows the user to make changes, access files, and retrieve files on a remote host.<br/>
+
+					•	Mail Services: This application provides basis for e-mail forwarding and storage.<br/>
+
+					•	Directory Services: This application provides distributed data sources and access for global information about various objects and services.
+					</P>
+                    <center><img src="pic/layer3.jpg" class="img-thumbnail"/></center>
+                    <p>The packet flow in a network happens as follows. The data is generated by the application layer. The generated data passes layer by layer adding the headers of each layer and passes through the network link. It encounters many intermediate routers. It is important to notethat routers consist of only 3 layers, and not the upper layer, since the functionality of a router is only to route the packet to the intended destination (generally using the shortest path) and the upper layers are not required (only logical addressing is necessary). The packet reaches the destination and the headers are removed one by one at each corresponding layer exactly opposite to the way they were added.</p>
+
+
+                    <p><b><u>THE TCP/IP PROTOCOL SUITE</u></b></p>
+                    <p>it is similar to the OSI Model, with a minor difference that the functionalities of the presentation and session layer are merged with that of the application layer and transport layer, and the data link and physical layers are merged into hot-to-network layer. Hence, the TCP/IP protocol suite has 4 layers: host-to-network, internet, transport, application.
+
+						However, for general purposes we consider the TCP/IP protocol suite to be of 5 layers; namely, physical, data-link, network, transport, application. And if not specified, please consider the network model consisting of these 5 layer, and follow the TCP/IP protocol suite.
+						</p>
+
+					<center><img src="pic/layer4.jpg" class="img-thumbnail"/></center>
+
+
+
+
+
+
+
+
+
+
+
+			
+		</div>
+	</div>
+
+
+
+
+
+<!-- RETURN TO TOP CODE RED SYMBOL -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+</body>
+</html>

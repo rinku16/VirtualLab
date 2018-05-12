@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Internet Protocol</title>
+
+	<!-- LINKS FOR USING BOOTSTRAP ONLINE START -->
+			   <!-- <meta charset="utf-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1">
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+			    <!-- LINKS FOR USING BOOTSTRAP ONLINE END-->
+			    <meta charset="utf-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+			  <style type="text/css">
+			     #myBtn {
+			              display: none;
+			              position: fixed;
+			              bottom: 20px;
+			              right: 30px;
+			              z-index: 99;
+			              font-size: 18px;
+			              border: none;
+			              outline: none;
+			              background-color: red;
+			              color: white;
+			              cursor: pointer;
+			              padding: 15px;
+			              border-radius: 4px;
+			            }
+
+			            #myBtn:hover {
+			              background-color: #555;
+			            }
+			   </style>
+</head>
+			 
+<body style="font-family: 'Open Sans', sans-serif;">
+
+	<div class="container">
+		<div class="jumbotron">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+					  
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+					      </button>
+					      <a class="navbar-brand" href="#">GATE | Computer Networks</a>
+					    </div>
+					    
+
+					    <div class="collapse navbar-collapse" id="myNavbar">
+
+							      <ul class="nav navbar-nav ">
+							        <li><a href="cn.html">Syllabus</a></li>
+							        <li class="dropdown">
+							          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics <span class="caret"></span></a>
+							          <ul class="dropdown-menu">
+							            <li><a href="introcn.html">Introduction</a></li>
+							            <li><a href="topo.html">Topologies</a></li>
+							            <li ><a href="concept.html">Concept of layers</a></li>
+							            <li ><a href="lan.html">LAN Technologies</a></li>
+							            <li ><a href="flow.html">Flow and Error Control</a></li>
+							             <li class="active"><a href="ip.html">Internet Protocol(IPv4)</a></li>
+							             <li ><a href="fragment.html">Concept Of Fragmentation</a></li>
+							          </ul>
+							        </li>
+							        <li class="dropdown">
+                                     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Quizzes<span class="caret"></span></a>
+									          <ul class="dropdown-menu">
+											            <li class="active"><a href="quiz.html">Quiz 1</a></li>
+											            <li><a href="quiz1.html">Quiz 2</a></li>
+											            <li><a href="quiz.html">Quiz 3</a></li>
+											            <li><a href="quiz.html">Quiz 4</a></li>
+									          </ul>
+							        	</li>
+							        <li><a href="Feedback.html">Feedback</a></li>
+							      </ul>
+						      
+					    </div>
+					  
+					</nav>
+					<p style="margin-top: 10px;text-align: center;"><b><u>INTERNET PROTOCOL (IPV4)</u></b></p>
+
+                <center><img src="pic/ip1.jpg" class="img-thumbnail"/></center>
+                <p><b>Version:</b> The field specifies the class of Internet Protocol used. It is a 4 bit field. For Example, If IPV4 is used; this field will contain the bits 0100.<br/>
+<b>Header Length: </b>Since the options field in the datagram is variable the header length is variable. The header length can vary from 20 Bytes to 60 Bytes (As options field can be of maximum 40 Bytes). However, using only 4 bits in binary, we can represent a number only till 15 (all 1’s). Therefore a scaling factor of 4 is used in header length. <br/>
+<br/><b>Example: </b>Header Length field if contains 0101, represents 5 in binary, but in reality implies 20 Bytes.<br/>
+5 * scaling factor = 5 * 4 = 20.<br/><br/>
+If header length is not a multiple of 4, some dummy bits called padding, is added to increase the length to be a multiple of 4 (We can infer that at max 3 Bytes of padding will be required in the worst case).<br/>
+Type of Service: It is used for more specific representation of services and priority settings of the datagram. Format of TOS is as shown.<br/>
+</p>
+<center><img src="pic/ip2.jpg" class="img-thumbnail"/></center><br/>
+<img src="pic/ip3.jpg" class="img-thumbnail"/>
+<img src="pic/ip4.jpg" class="img-thumbnail" align="right" /><br/>
+<p><b>Total Length: </b>The total length field defines the total length of the datagram including the header.<br/>
+<b>Identification: </b> This number is used to identify datagrams uniquely that go out of the host. It is generally useful in fragmentation, for reassembling the fragments, as each fragment of a datagram has the same identification number. More on fragmentation will be discussed later.<br/>
+<b>Flags:</b> Two flags are used. <br/>
+<b>DF:</b> Don’t Fragment the data at all. If there is no fragmentation, then DF is 1. It implies that either datagram has to be sent as a whole, or nothing has to be sent. However, if the network on the way cannot accept the datagram as a whole, the datagram will be discarded and an ICMP packet will be sent to the sender. It is now sender’s responsibility to reduce the size of the datagram and send it again (No router can fragment the packet as DF = 1).<br/>
+<b>MF: </b>More fragments follow the current fragment.<br/>
+<b>Fragment Offset:</b> This field is necessary for reassembly at the destination. The Offset field specifies how many bytes are ahead of the current fragment. Fragmentation will be discussed in detail later.<br/>
+<b>Time to Live (TTL):</b> Sometimes while packets are trying to reach the destination from the source passing through the default router, they may fall in an infinite loop (Spanning trees can be used to prevent such a problem). However, if many such packets accumulate, they lead to congestion, and many important packets may be discarded because of these pockets. This problem is corrected using TTL field. Using TTL, the number of hops taken by the router is restricted. TTL field is set to an estimated value of the number of hops,(or sometimes this value is multiplied by a factor, say 2) and this value is decremented at every hop. If the value of the TTL field becomes 0 at any router, the packet is discarded. However, if TTL field becomes 0 at the destination the packet will be accepted.
+</p>
+<center><img src="pic/ip5.jpg" class="img-thumbnail"/></center>
+<p><b>Protocol: </b>Specifies the value of the upper layer protocol used. The routers on the way consist of only 3 layers, as discussed before. Therefore, the routers cannot know which protocol the layers above are using. Why do routers need to have that information? When congestion occurs, routers discard the packets based on the priority of a particular packet. As we’ll see later the TCP packets have more priority than UDP packets or ICMP packets, hence routers should discard these packets first.</p>
+<center><img src="pic/ip6.jpg" class="img-thumbnail"/></center>
+<p><b>Header Checksum:</b> It is used for error detection on the header. Every part of the header is divided into 2 bytes each and then checksum is calculated. The procedure for calculation of checksum is discussed in error control mechanisms.<br/>
+It is calculated only on the header since the header is more prone to errors as compared to data. The header fields are modified at every router, therefore, checksum needs to be recomputed at every router. Routers will have to waste a lot of computation power and time, to calculate checksum every time on data as well.<br/>
+Generally the fields that might change at a router are: TTL, Fragmentation Offset, MF, Options, and Total Length. Error detection of data will be taken care of by the upper layer protocol (TCP).<br/>
+<br/>
+               Q. An IPv4 packet has arrived with the first 8 bits as 01000010. The receiver discards the packet. Why?
+ 
+											<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">See Solution</button>
+										  <div id="demo" class="collapse">								  	
+										 
+											<p>There is an error in this packet. The 4 leftmost bits (0100) show the version, which is correct. The next 4 bits (0010) show an invalid header length (2 × 4 = 8). The minimum number of bytes in the header must be 20. The packet has been corrupted in transmission.</p> </div>
+<p>Q. In an IPv4 packet, the value of HLEN is 1000 in binary. How many bytes of options are being carried by this packet?</p>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1">See Solution</button><br/><br/>
+										  <div id="demo1" class="collapse">								  	
+										 
+											<p>
+Solution: The HLEN value is 8, which means the total number of bytes in the header is 8 × 4, or 32 bytes. The first 20 bytes are the base header; the next 12 bytes are the options.</p></div>
+
+<p>Q. An IPv4 packet has arrived with the first few hexadecimal digits as given.
+0x45000028000100000102 . . .
+How many hops can this packet travel before being dropped? The data belong to what upper-layer protocol?</p>
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">See Solution</button><br/><br/>
+										  <div id="demo2" class="collapse">								  	
+										 
+											<p>
+Solution: To find the time-to-live field, we skip 8 bytes. The time-to-live field is the ninth byte, which is 01. This means the packet can travel only one hop. The protocol field is the next byte (02), which means that the upper-layer protocol is IGMP.</p><br/></div>
+
+
+
+
+<p><b><u>Source IP Address & Destination IP address: </u></b>These fields are used for logical addressing. A logical address is responsible for routing the packet from the source to the intended destination.<br/>
+Options: (0-40 Bytes)<br/>
+The different functionalities available in the options field are:<br/>
+<b>•	Record Route: </b>It is used to store the IP addresses of the hops encountered on the way. As an IP address is of 4 Bytes, and the options field is 40 Bytes, we would think that a maximum of 10 IP addresses can be stored in the record route. However, some space is also required between 2 different IP addresses to differentiate them with each other; hence the max limit is set to 9. It is generally used by ISPs (Internet Service Providers), and not provided to the general user. 
+</p>
+<center><img src="pic/ip7.jpg" class="img-thumbnail"/></center>
+<p><b>•	Source Routing:</b> Source routing is used to specify a particular route through which we have to route the packet.
+There are 2 types of source routing:
+Loose Source Routing: Only some of the hops are specified. Rest of the route is flexible. Example: in the figure given below if loose source routing is used, then a packet may follow the path R1, R2, R3 or R1, R4, R3; as R1 and R3 are fixed, while the middle hop is not specified. 
+Strict Source Routing: The entire route is specified.
+This is also used by the ISPs, to test whether a path is working or not.
+</p>
+<center><img src="pic/ip8.jpg" class="img-thumbnail"/></center>
+<p><b>•	Padding: </b>As we’ve seen before, if the header size is not a multiple of 4, we have to add some padding to make it a multiple of 4. That padding is added in the options field. </p>
+
+
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- RETURN TO TOP CODE RED SYMBOL -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

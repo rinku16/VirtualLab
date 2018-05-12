@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUIZ 1</title>
+
+				 <!-- LINKS FOR USING BOOTSTRAP ONLINE START -->
+			   <!-- <meta charset="utf-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1">
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+			    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+			    <!-- LINKS FOR USING BOOTSTRAP ONLINE END-->
+			    <meta charset="utf-8">
+
+
+			     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+   				<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+    			<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+    			 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+
+			  <meta name="viewport" content="width=device-width, initial-scale=1">
+			  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+			  <script type="text/javascript" src="js/quiz.js"></script>
+			  <link rel="stylesheet" type="text/css" href="css/quiz.css">
+
+
+
+			  <style type="text/css">
+			     #myBtn {
+			              display: none;
+			              position: fixed;
+			              bottom: 20px;
+			              right: 30px;
+			              z-index: 99;
+			              font-size: 18px;
+			              border: none;
+			              outline: none;
+			              background-color: red;
+			              color: white;
+			              cursor: pointer;
+			              padding: 15px;
+			              border-radius: 4px;
+			            }
+
+			            #myBtn:hover {
+			              background-color: #555;
+			            }
+			   </style>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+
+	<div class="container">
+		<div class="jumbotron">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+					  
+					    <div class="navbar-header">
+					      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>                        
+					      </button>
+					      <a class="navbar-brand" href="#">GATE | Computer Networks</a>
+					    </div>
+					    
+
+					    <div class="collapse navbar-collapse" id="myNavbar">
+
+							      <ul class="nav navbar-nav ">
+							      	     <li><a href="vlab.html">Home</a></li>
+								        <li><a href="cn.html">Syllabus</a></li>
+
+									        <li class="dropdown">
+									          	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics <span class="caret"></span></a>
+										          <ul class="dropdown-menu">
+												            <li><a href="introcn.html">Introduction</a></li>
+												            <li><a href="topo.html">Topologies</a></li>
+												            <li ><a href="concept.html">Concept of layers</a></li>
+												            <li ><a href="lan.html">LAN Technologies</a></li>
+										            		<li class="active"><a href="flow.html">Flow and Error Control</a></li>
+										            		<li ><a href="ip.html">Internet Protocol(IPv4)</a></li>
+							                                <li ><a href="fragment.html">Concept Of Fragmentation</a></li>
+										          </ul>
+									        </li>
+								        
+
+		                                    	<li class="dropdown">
+		                                     		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Quizzes<span class="caret"></span></a>
+											          <ul class="dropdown-menu">
+													            <li class="active"><a href="quiz.html">Quiz 1</a></li>
+													            <li><a href="quiz1.html">Quiz 2</a></li>
+													            <li><a href="quiz.html">Quiz 3</a></li>
+													            <li><a href="quiz.html">Quiz 4</a></li>
+											          </ul>
+									        	</li>
+							        <li><a href="feedback.html">Feedback</a></li>
+							      </ul>
+						      
+					    </div>
+					  
+					</nav>
+
+		</div>
+	</div>
+
+			        
+<div class="container">
+	<div class="jumbotron">
+						<h2 class="quizHeader">QUIZ-1 INTRODUCTION AND CONCEPT OF LAYERING</h2>
+  
+	
+					  	<div>
+					  		<p class="question">Q1:In the following pairs of OSI protocol layer/sub-layer and its functionality, the
+																	INCORRECT pair is : (Gate 2014)</p>
+
+					    	<ul>
+					    	<input class="answer" type="radio" name="q1" value="0">
+					        <label >A. Network Layer and Routing</label>
+					    	<br>
+					        <input class="answer" type="radio" name="q1" value="1">
+					        <label id="correctString1">B. Data Link Layer and Bit Synchronization</label>
+					        <br>
+					        <input class="answer" type="radio" name="q1" value="0">
+					        <label>C. Transport layer and End-to-end process communication</label>
+					        <br>
+					        <input class="answer" type="radio" name="q1" value="0">
+					        <label>D. Medium Access Control sub-layer and Channel sharing</label>
+				    		</ul>
+					  	</div>
+					  
+					  	<div>
+					  		<p class="question">Q2: Choose the best matching between Group 1 and Group 2<br/>
+																			Group-1<br/>
+																			P. Data link layer<br/>
+																			Q. Network layer<br/>
+																			R. Transport layer<br/>
+																			Group-2<br/>
+																			1.	Ensures reliable transport of data over a physical point-to-point link<br/>
+																			2.	Encodes/decodes data for physical transmission<br/>
+																			3.	Allows end-to-end communication between two processes<br/>
+
+																			4.	Routes data from one network node to the next<br/></p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q2" value="1">
+					        <label id="correctString2">A.	P-1, Q-4, R-3</label>
+					        <br>
+					        <input class="answer" type="radio" name="q2" value="0">
+					        <label >B.	P-2, Q-4, R-1</label>
+					        <br>
+					        <input class="answer" type="radio" name="q2" value="0">
+					        <label>C.	P-2, Q-3, R-1</label>
+					        <br>
+					        <input class="answer" type="radio" name="q2" value="0">
+					        <label>D.	P-1, Q-3, R-2</label>
+					    	</ul>
+					  	</div>
+					  
+					  	<div>
+					  		<p class="question">Q3: What is the meaning of Bandwidth in Network?</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q3" value="0">
+					        <label>A.	Connected Computers in the Network</label>
+					        <br>
+					        <input class="answer" type="radio" name="q3" value="1">
+					        <label id="correctString3">B.	Transmission capacity of a communication channels</label>
+					        <br>
+					        <input class="answer" type="radio" name="q3" value="0">
+					        <label>C.	Class of IP used in Network</label>
+					        <br>
+					        <input class="answer" type="radio" name="q3" value="0">
+					        <label>D.	None of Above</label>
+					    	</ul>
+						</div>
+					  
+					  	<div>
+					  		<p class="question">Q4:Which layers of the OSI model are host-to-host layers?</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q4" value="0">
+					        <label>A.	Network, Transport, Session, Presentation.</label>
+					        <br>
+					        <input class="answer" type="radio" name="q4" value="1">
+					        <label id="correctString4">B.	Transport, Session, Presentation, Application.</label>
+					        <br>
+					        <input class="answer" type="radio" name="q4" value="0">
+					        <label>C.	Physical, Data link, Network, Transport.</label>
+					        <br>
+					        <input class="answer" type="radio" name="q4" value="0">
+					        <label>D.	Data link, Network, Transport, Session.</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q5: Which of the following layer of OSI model also called end-to-end layer?</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q5" value="1">
+					        <label id="correctString5">A. Transport layer</label>
+					        <br>
+					        <input class="answer" type="radio" name="q5" value="0">
+					        <label >B. Session layer</label>
+					        <br>
+					        <input class="answer" type="radio" name="q5" value="0">
+					        <label>C. Network layer</label>
+					        <br>
+					        <input class="answer" type="radio" name="q5" value="0">
+					        <label>D. Presentation layer</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q6:Communication between a computer and a keyboard involves ______________ transmission</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q6" value="0">
+					        <label>A.	Automatic</label>
+					        <br>
+					        <input class="answer" type="radio" name="q6" value="0">
+					        <label >B.	Half-duplex</label>
+					        <br>
+					        <input class="answer" type="radio" name="q6" value="0">
+					        <label>C.	Full-duplex</label>
+					        <br>
+					        <input class="answer" type="radio" name="q6" value="1">
+					        <label id="correctString6">D.	Simplex</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q7: In the layer hierarchy as the data packet moves from the upper to the lower layers, headers are</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q7" value="1">
+					        <label id="correctString7">A. Added</label>
+					        <br>
+					        <input class="answer" type="radio" name="q7" value="0">
+					        <label >B. Removed</label>
+					        <br>
+					        <input class="answer" type="radio" name="q7" value="0">
+					        <label>C. Rearranged</label>
+					        <br>
+					        <input class="answer" type="radio" name="q7" value="0">
+					        <label>D. Modified</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q8: Assume that source S and destination D are connected through two intermediate routers labelled R. Determine how many times each packet has to visit the network layer and the data link layer during a transmission from S to D. (Gate 2013)</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q8" value="0">
+					        <label>A. Network layer - 4 times and Data link layer- 4times</label>
+					        <br>
+					        <input class="answer" type="radio" name="q8" value="0">
+					        <label>B. Network layer- 4 times and Data link layer- 3 times</label>
+					        <br>
+					        <input class="answer" type="radio" name="q8" value="1">
+					        <label  id="correctString8">C.	Network layer-4 times and Data link layer-6 times</label>
+					        <br>
+					        <input class="answer" type="radio" name="q8" value="0">
+					        <label>D.	Network layer- 2 times and Data link layer- 6 times</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q9: Which addressing system has topological significance?</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q9" value="1">
+					        <label id="correctString9">A. Logical or network</label>
+					        <br>
+					        <input class="answer" type="radio" name="q9" value="0">
+					        <label >B. Physical or LAN</label>
+					        <br>
+					        <input class="answer" type="radio" name="q9" value="0">
+					        <label>C. Port addressing system</label>
+					        <br>
+					        <input class="answer" type="radio" name="q9" value="0">
+					        <label>D. Multicast addressing system</label>
+				    		</ul>
+					  	</div>
+
+					  	<div>
+					  		<p class="question">Q10: How many layers does OSI Reference Model has?</p>
+
+					    	<ul>
+					        <input class="answer" type="radio" name="q10" value="0">
+					        <label>A.	5</label>
+					        <br>
+					        <input class="answer" type="radio" name="q10" value="0">
+					        <label >B.	6</label>
+					        <br>
+					        <input class="answer" type="radio" name="q10" value="0">
+					        <label>C.	4</label>
+					        <br>
+					        <input class="answer" type="radio" name="q10" value="1">
+					        <label id="correctString10">D.	7</label>
+				    		</ul>
+					  	</div>
+
+					  	
+					
+						<br/>
+					  	<div class="submitter">
+					          <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+					          type="submit" value="Submit" />
+					    </div>
+				  
+				<!--show only wrong answers on submit-->
+					    <div class="quizAnswers" id="correctAnswer1"></div>
+						<div class="quizAnswers" id="correctAnswer2"></div>
+					    <div class="quizAnswers" id="correctAnswer3"></div>
+					    <div class="quizAnswers" id="correctAnswer4"></div>
+					    <div class="quizAnswers" id="correctAnswer5"></div>
+						<div class="quizAnswers" id="correctAnswer6"></div>
+					    <div class="quizAnswers" id="correctAnswer7"></div>
+					    <div class="quizAnswers" id="correctAnswer8"></div>
+					    <div class="quizAnswers" id="correctAnswer9"></div>
+						<div class="quizAnswers" id="correctAnswer10"></div>
+
+
+				<!--show score upon submit-->
+					    <div>
+					    	<h2 class="quizScore" id="userScore"></h2>
+					    </div>
+
+				</div>
+			</div>
+		
+
+
+
+
+
+
+
+
+
+<!-- RETURN TO TOP CODE RED SYMBOL -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+<!-- THIS FORMAT IS USED FOR QUIZ HERE CORRECT OPTION HAS VALUE = 1  WRONG OPTION HAS VALUE = 0 -->
+
+<!-- <div>
+	  		<p class="question">4. Quiz question #4</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div> -->
